@@ -22,10 +22,14 @@
       <div class="menu">
         <ul>
           <li>
-            <a id="eventosNav" class="close" href="#eventos">Eventos</a>
+            <a id="eventosNav" class="close" href="#eventos"
+              ><strong>Eventos</strong>
+            </a>
           </li>
           <li>
-            <a id="contactNav" class="close" href="#contact">Contato</a>
+            <a id="contactNav" class="close" href="#contact"
+              ><strong>Contato</strong>
+            </a>
           </li>
         </ul>
       </div>
@@ -59,5 +63,49 @@
         </div>
       </div>
     </section>
+    <section id="event">
+      <h2>EVENTOS</h2>
+      <div class="container-slider">
+        <button id="prev-button" class="bntSlider" onclick="prev()">
+          <img src="./assets/arrow.png" alt="netx-button" />
+        </button>
+        <div class="container-images">
+          <img
+            src="./assets/carrocel/01.JPG"
+            alt="imagem do slide"
+            class="slider selected"
+          />
+          <img
+            src="./assets/carrocel/02.JPG"
+            alt="imagem do slide"
+            class="slider"
+          />
+          <img
+            src="./assets/carrocel/03.JPG"
+            alt="imagem do slide"
+            class="slider"
+          />
+          <img
+            src="./assets/carrocel/04.JPG"
+            alt="imagem do slide"
+            class="slider"
+          />
+          <img
+            src="./assets/carrocel/05.JPG"
+            alt="imagem do slide"
+            class="slider"
+          />
+          <img
+            src="./assets/carrocel/06.JPG"
+            alt="imagem do slide"
+            class="slider"
+          />
+        </div>
+        <button id="next-button" class="bntSlider" onclick="next()">
+          <img src="./assets/arrow.png" alt="next-button" />
+        </button>
+      </div>
+    </section>
   </body>
+  <script src="./script.js"></script>
 </html>
