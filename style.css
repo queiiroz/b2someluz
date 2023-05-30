@@ -25,7 +25,7 @@
 @keyframes enter {
   from {
     opacity: 0;
-    transform: translateX(-200px);
+    transform: translateX(-20px);
   }
   to {
     opacity: 1;
@@ -36,7 +36,7 @@
 @keyframes enterTwo {
   from {
     opacity: 0;
-    transform: translateX(200px);
+    transform: translateX(20px);
   }
   to {
     opacity: 1;
@@ -49,7 +49,11 @@ body {
   color: #eaeaea;
 }
 
-nav {
+html {
+  scroll-behavior: smooth;
+}
+
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,7 +67,7 @@ nav {
   z-index: 10;
 }
 
-nav img {
+header img {
   height: 80px;
   width: 80px;
 }
@@ -103,19 +107,12 @@ a {
   color: #eaeaea;
 }
 
-section {
-  height: 100vh;
-}
-
 #home {
   display: grid;
-  grid-template-areas: "about video";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100vh;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
 .col-a {
-  grid-area: "about";
   display: flex;
   flex-direction: column;
 
@@ -143,9 +140,7 @@ p {
 }
 
 .col-b {
-  grid-area: "video";
   padding: 50px;
-
   animation: enterTwo 1.5s ease-in-out;
 }
 
@@ -154,11 +149,14 @@ p {
   height: 525px;
   width: 525px;
   border-radius: 8px;
+  margin: 0 auto;
 }
 
 iframe {
   border-radius: 8px;
   transition: all 0.3s ease-in;
+  width: 32rem;
+  height: 100%;
 }
 
 .col-b div:hover iframe {
@@ -168,32 +166,36 @@ iframe {
 #event {
   background-color: #101010;
   text-align: center;
-  padding: 50px;
-
+  padding: 100px 50px;
+  height: 80vh;
   font-size: 2rem;
 }
 
 .container-slider {
+  margin-top: 18px;
   height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.container-images {
-  height: 100%;
-  position: relative;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 32px;
+}
+
+.container-images {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100%;
 }
 
 .slider {
   height: 500px;
-  width: 900px;
+  width: 100%;
   object-fit: cover;
   position: absolute;
-
   opacity: 0;
 }
 
