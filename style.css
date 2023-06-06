@@ -109,14 +109,14 @@ a {
 
 #home {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
 }
 
 .col-a {
   display: flex;
   flex-direction: column;
 
-  padding: 100px 100px;
+  padding: 50px;
 
   animation: enter 1.5s ease-in-out;
 }
@@ -146,16 +146,19 @@ p {
 
 .col-b div {
   overflow: hidden;
-  height: 525px;
-  width: 525px;
+  height: 30rem;
+  width: 30rem;
   border-radius: 8px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 iframe {
   border-radius: 8px;
   transition: all 0.3s ease-in;
-  width: 32rem;
+  width: 100%;
   height: 100%;
 }
 
@@ -229,7 +232,7 @@ iframe {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px;
+  padding: 100px 50px;
   gap: 10px;
 
   position: relative;
@@ -265,7 +268,9 @@ footer {
 .final {
   display: flex;
   align-items: center;
-  gap: 400px;
+  justify-content: center;
+  gap: 300px;
+  text-align: center;
 }
 
 .links {
@@ -274,4 +279,11 @@ footer {
 
 footer a {
   margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .final {
+    display: flex;
+    flex-direction: column;
+  }
 }
